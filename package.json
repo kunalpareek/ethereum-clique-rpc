@@ -1,0 +1,31 @@
+{
+  "name": "ethereum-clique-tools",
+  "version": "0.1.0",
+  "description": "An automated  tool to add and remove sealers using an api",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/kunalpareek/ethereum-clique-tools.git"
+  },
+  "author": "kunal pareek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/kunalpareek/ethereum-clique-tools/issues"
+  },
+  "homepage": "https://gitlab.com/kunalpareek/ethereum-clique-tools#README",
+  "dependencies": {
+    "app-root-path": "^2.1.0",
+    "bluebird": "^3.5.2",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "morgan": "^1.9.1",
+    "winston": "^2.4.1"
+  }
+}
