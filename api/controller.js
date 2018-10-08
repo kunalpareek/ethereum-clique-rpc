@@ -4,10 +4,10 @@
  */
 
 module.exports = {
-    health : (req, res) => {
-        res.status(200).json({
-            "success": true,
-            "data": "healthy"
-        });
-    }
+  health: (req, res) => {
+    res.status(200).json({
+      'success': true,
+      'data': 'healthy'
+    })
+  }
 }

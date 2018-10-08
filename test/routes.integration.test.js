@@ -1,44 +1,51 @@
-var chai = require('chai');
-var should = chai.should();
-var chaiHttp = require('chai-http');
-chai.use(chaiHttp);
+/* eslint-env mocha */
 
-let server = require('./../app');
+var chai = require('chai')
+var chaiHttp = require('chai-http')
+chai.use(chaiHttp)
 
-describe('routes', function() {
+let server = require('./../app')
 
-  beforeEach(function(done) {
-    done();
-  });
+describe('routes', () => {
+  beforeEach(done => {
+    done()
+  })
 
-  afterEach(function(done) {
-    done();
-  });
+  afterEach(done => {
+    done()
+  })
 
-  describe('GET /v1/health', function() {
-    it('should return response if server is alive', function(done) {
+  describe('GET /v1/health', () => {
+    it('should return response if server is alive', done => {
       chai.request(server)
-      .get('/v1/health')
-      .end(function(err, res) {
-        res.redirects.length.should.equal(0);
-        res.status.should.equal(200);
-        res.type.should.equal('application/json');
-        done();
-      });
-    });
-  });
+        .get('/v1/health')
+        .end((err, res) => {
+          if (err) {
+            done(err)
+          } else {
+            res.redirects.length.should.equal(0)
+            res.status.should.equal(200)
+            res.type.should.equal('application/json')
+            done()
+          }
+        })
+    })
+  })
 
-  describe('GET /', function() {
-    it('should throw an error', function(done) {
+  describe('GET /', () => {
+    it('should throw an error', done => {
       chai.request(server)
-      .get('/')
-      .end(function(err, res) {
-        res.redirects.length.should.equal(0);
-        res.status.should.equal(404);
-        res.type.should.equal('text/html');
-        done();
-      });
-    });
-  });
-
-});
+        .get('/')
+        .end((err, res) => {
+          if (err) {
+            done(err)
+          } else {
+            res.redirects.length.should.equal(0)
+            res.status.should.equal(404)
+            res.type.should.equal('text/html')
+            done()
+          }
+        })
+    })
+  })
+})

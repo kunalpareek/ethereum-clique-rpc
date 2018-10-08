@@ -3,10 +3,10 @@
  * @desc API Routes
  */
 
-const express = require('express');
-const router = express.Router();
+const express = require('express')
+const router = express.Router()
 
-const Controller = require('./controller');
+const Controller = require('./controller')
 
 /**
  * Health Check
@@ -14,8 +14,6 @@ const Controller = require('./controller');
  * request - {}
  * response - {}
  */
-router.get('/health', Controller.health);
+router.get('/health', Controller.health)
 
-
-
-module.exports = router;
+module.exports = router
